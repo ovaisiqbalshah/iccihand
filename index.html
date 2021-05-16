@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>
+    Simple web Development Template
+  </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar background">
+    <ul class="nav-list">
+      <div class="logo">
+        <img src="Iqra.jpg">
+      </div>
+      <li><a href="#web">Home</a></li>
+
+      <li><a href="Courses/courses.html">Courses</a></li>
+      <li><a href="About/about.html">About Us</a></li>
+      <li><a type="button" href="#program">Material</a></li>
+
+    </ul>
+
+    <div class="rightNav">
+      <input type="text" name="search" id="search">
+      <button class="btn btn-sm">Search</button>
+    </div>
+  </nav>
+  <section>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="iqra11.jpg" style="width:100%" height="500PX">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="iqra22.jpg" style="width:100%" height="500px">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="iqra33.jpg" style="width:100%" height="500px">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </section>
+ 
+  <div class="box-main" style="width: 48%;float: left;">
+    <div class="firstHalf">
+      <h1 class="text-big" id="web">
+        <marquee style="padding: 5px;margin: 0px;" width="60%" direction="left" height="100px">
+          GENERAL NOTIFICATIONS
+        </marquee>
+      </h1>
+      <hr>
+
+      <p class="text-small">
+        HTML stands for HyperText Markup
+        Language. It is used to design
+        web pages using a markup language.
+        HTML is the combination of Hypertext
+        and Markup language. Hypertext
+        defines the link between the web
+        pages. A markup language is used
+        to define the text document within
+        tag which defines the structure of
+        web pages. HTML is a markup language
+        that is used by the browser to
+        manipulate text, images, and other
+        content to display it in the required
+        format.
+      </p>
+    </div>
+  </div>
+
+
+  <section class="secondsection">
+    <div class="box-main" style="width: 48%; float: right;">
+      <div class="firstHalf">
+        <h1 class="text-big" id="program">
+
+          <marquee style="padding: 5px;margin: 0px;" width="60%" direction="left" height="100px">
+            EXAM NOTIFICATIONS
+          </marquee>
+
+        </h1>
+        <hr>
+        <p class="text-small">
+          C is a procedural programming language.
+          It was initially developed by Dennis
+          Ritchie as a system programming
+          language to write operating system.
+          The main features of C language include
+          low-level access to memory, simple set
+          of keywords, and clean style, these
+          features make C language suitable for
+          system programming like operating system
+          or compiler development.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div>
+    <p style="padding: 5px; margin: 0px;text-align: center;font-weight: 200 ;" id="blink"> TOP FACULTY </p>
+    <script type="text/javascript">
+      var blink = document.getElementById('blink');
+      setInterval(function () {
+        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+      }, 1500);
+    </script>
+    <div class="container">
+      <div class="row">
+        <div class="coloumn">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+            </div>
+            <div class="team-content">
+              <h3 class="name">Michele Miller</h3>
+              <h4 class="title">Web Developer</h4>
+            </div>
+            <ul class="social">
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="coloumn">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+            </div>
+            <div class="team-content">
+              <h3 class="name">Patricia Knott</h3>
+              <h4 class="title">Web Developer</h4>
+            </div>
+            <ul class="social">
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="coloumn">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+            </div>
+            <div class="team-content">
+              <h3 class="name">Justin Ramos</h3>
+              <h4 class="title">Web Developer</h4>
+            </div>
+            <ul class="social">
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="coloumn">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+            </div>
+            <div class="team-content">
+              <h3 class="name">Mary Huntley</h3>
+              <h4 class="title">Web Developer</h4>
+            </div>
+            <ul class="social">
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
+              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="background">
+    <p class="text-footer">
+
+      <b>About ICCI</b><br>
+      Iqra Coaching and Counselling Institute will provide students excellent quality education and facilities for their
+      overall development. They will be taught various skills to face the dynamic challenges
+
+
+
+
+    </p>
+
+  </footer>
+</body>
+
+</html>
